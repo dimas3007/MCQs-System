@@ -2,22 +2,15 @@ package summative.mcq;
 
 import java.util.Scanner;
 
-public class User {
+public class User extends McqSystem {
     private String name = "";
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void inputUserName () {
+    public String inputUserName () {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your name : ");
         name += input.nextLine();
         System.out.println();
+
+        return name;
     }
 
 }

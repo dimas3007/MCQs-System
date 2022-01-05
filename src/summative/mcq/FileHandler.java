@@ -23,12 +23,12 @@ public class FileHandler {
         return newFiles;
     }
 
-    public List readCsvFile() {
+    public List readCsvFile(String fileName) {
         List<List<String>> lines = new ArrayList<>();
         Scanner inputStream;
 
         try {
-            inputStream = new Scanner(new File("src/csv/html.csv"));
+            inputStream = new Scanner(new File("src/csv/" + fileName));
             while(inputStream.hasNext()){
                 String line = inputStream.nextLine();
                 String[] values = line.split(";");
